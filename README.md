@@ -10,6 +10,13 @@ Gemini_Xtention is a powerful browser extension that helps you analyze and summa
 
 ---
 
+## 💡 Motivation
+
+Manually copying the YouTube URL, opening Gemini, pasting the link, and asking it to summarize is repetitive and cumbersome.  
+**Gemini_Xtention automates this entire process**—saving you time and effort with just a click or right-click!
+
+---
+
 ## 🌟 Features
 
 - 🎯 **One-click Summarization:** Click the extension icon or use the context menu on any YouTube link to start summarizing.
