@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Youtube Video Summarizer",
-  "version": "1.0",
+  "version": "1.5",
   "description": "Summarizes the Youtube video using Google Gemini",
   "permissions": [
     "tabs",
