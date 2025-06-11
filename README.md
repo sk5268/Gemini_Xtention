@@ -61,8 +61,8 @@ This extension requests the following permissions:
 
 - **Manifest Version:** 2
 - **Supported Browsers:**  
-  - Google Chrome  
-  - Mozilla Firefox
+  - Google Chrome & Derivatives
+  - Mozilla Firefox & Derivatives
 - **Main Files:**  
   - `background.js` — Handles extension logic and tab management  
   - `content.js` — Injects the prompt into Gemini  
@@ -74,4 +74,12 @@ This extension requests the following permissions:
 
 > Gemini_Xtention is **not affiliated** with Google or YouTube.
 
+---
+
+## ✅ To-Do
+
+- [ ] Publish to Firefox
+- [ ] Publish to Chrome
+- [ ] Add configurations page for custom prompts
+- [ ] Support for Safari Browser (Lower Priority)
 ---
