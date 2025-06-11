@@ -6,9 +6,7 @@
 
 **✨ YouTube Video Summarizer Using Google Gemini ✨**
 
-Gemini_Xtention is a powerful browser extension that helps you analyze and summarize all information from any YouTube video using Google Gemini.
-No API keys required, no configuration needed !!
-Just Plug & Play...
+Gemini_Xtention is a powerful browser extension that helps you analyze and summarize all information from any YouTube video using Google Gemini. No API keys required, no configuration needed !! Just Plug & Play...
 ---
 
 ## 💡 Motivation
