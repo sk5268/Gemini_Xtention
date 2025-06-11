@@ -77,7 +77,7 @@ This extension requests the following permissions:
 - [ ] Add configurations page for custom prompts
 - [ ] Support for Safari Browser (Lower Priority)
 
-## Can't Do
+## ❌ Can't Do
 - [ ] Publish to Chrome (Too broke to pay 5$ registration fee)
 - [ ] Publish to Apple App Store (Too broke to pay the 99$ annual fee)
 ---
