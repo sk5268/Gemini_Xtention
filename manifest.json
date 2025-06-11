@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
-  "name": "Gemini URL Paster",
+  "name": "Youtube Video Summarizer",
   "version": "1.0",
-  "description": "Copies current tab URL or selected link, opens Gemini, and pastes URL with a hardcoded prompt into the active input/textarea.",
+  "description": "Summarizes the Youtube video using Google Gemini",
   "permissions": [
     "tabs",
     "contextMenus",
@@ -11,8 +11,8 @@
   "browser_action": {
     "default_title": "Copy URL and Paste to Gemini",
     "default_icon": {
-      "48": "icons/icon-48.png",
-      "128": "icons/icon-128.png"
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
     }
   },
   "background": {
@@ -20,7 +20,7 @@
     "persistent": false
   },
   "icons": {
-    "48": "icons/icon-48.png",
-    "128": "icons/icon-128.png"
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
   }
 }
