@@ -115,8 +115,8 @@ browser.browserAction.onClicked.addListener(async (initiatingTab) => {
 // Create context menu item
 browser.runtime.onInstalled.addListener(() => {
   browser.contextMenus.create({
-    id: "summarise-with-gemini",
-    title: "Summarise with Gemini",
+    id: "summarize-with-gemini",
+    title: "Summarize with Gemini",
     contexts: ["link"],
     targetUrlPatterns: ["*://*.youtube.com/watch*", "*://youtu.be/*"] // Only for YouTube links
   });
@@ -124,7 +124,7 @@ browser.runtime.onInstalled.addListener(() => {
 
 // Listener for context menu item click
 browser.contextMenus.onClicked.addListener(async (info, tab) => {
-  if (info.menuItemId === "summarise-with-gemini") {
+  if (info.menuItemId === "summarize-with-gemini") {
     if (info.linkUrl) {
       processAndPasteInGemini(info.linkUrl);
     } else {
