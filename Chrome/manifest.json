@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Youtube Video Summarizer",
+  "version": "1.5",
+  "description": "Summarizes the Youtube video using Google Gemini",
+  "permissions": [
+    "tabs",
+    "contextMenus",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://gemini.google.com/*"
+  ],
+  "action": {
+    "default_title": "Copy URL and Paste to Gemini",
+    "default_icon": {
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
