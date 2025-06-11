@@ -101,6 +101,18 @@ browser.browserAction.onClicked.addListener(async (initiatingTab) => {
       console.error("Gemini Summarize Extention: Could not get current tab URL for browser action.");
       return;
     }
+
+    // Only proceed if the URL is a YouTube video link
+    const youtubePatterns = [
+      /^https?:\/\/(www\.)?youtube\.com\/watch\?/, // youtube.com/watch
+      /^https?:\/\/youtu\.be\//                     // youtu.be short links
+    ];
+    const isYoutube = youtubePatterns.some(pattern => pattern.test(currentTabUrl));
+    if (!isYoutube) {
+      console.warn("Gemini Summarize Extention: Current tab is not a YouTube video. Action aborted.");
+      return;
+    }
+
     // Call the function
     processAndPasteInGemini(currentTabUrl);
   } catch (error) {
