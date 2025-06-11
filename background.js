@@ -1,28 +1,5 @@
-browser.browserAction.onClicked.addListener(async (initiatingTab) => {
-  let currentTabUrl;
-  try {
-    // Get the URL from the tab where the action was clicked,
-    // or fall back to the active tab in the current window.
-    if (initiatingTab && initiatingTab.url) {
-        currentTabUrl = initiatingTab.url;
-    } else {
-        const [activeTab] = await browser.tabs.query({ active: true, currentWindow: true });
-        if (activeTab && activeTab.url) {
-            currentTabUrl = activeTab.url;
-        }
-    }
-
-    if (!currentTabUrl) {
-      console.error("Gemini URL Paster: Could not get current tab URL.");
-      return;
-    }
-  } catch (error) {
-    console.error("Gemini URL Paster: Error getting current tab URL:", error);
-    return;
-  }
-
-  // Hardcode the prompt
-  const promptText = `**Extract and present all information from the video without omitting any detail. Follow these instructions:**
+// Hardcode the prompt (defined once at the top)
+const promptText = `**Extract and present all information from the video without omitting any detail. Follow these instructions:**
 
 1. Go through the entire video thoroughly.
 2. Capture and present **everything spoken**, including definitions, explanations, examples, references, and any background context.
@@ -55,9 +32,15 @@ Conclusion
 <200-word summary of the full video>
 \`\`\``;
 
-  const textToPaste = `${currentTabUrl}\n\n${promptText}`;
+async function processAndPasteInGemini(urlToProcess) {
+  if (!urlToProcess) {
+    console.error("Gemini URL Paster: No URL provided for processing.");
+    return;
+  }
 
+  const textToPaste = `${urlToProcess}\n\n${promptText}`;
   let newGeminiTab;
+
   try {
     newGeminiTab = await browser.tabs.create({ url: "https://gemini.google.com/app" });
   } catch (error) {
@@ -72,32 +55,23 @@ Conclusion
 
   const tabUpdateListener = async (tabId, changeInfo, tab) => {
     if (tabId === newGeminiTab.id && changeInfo.status === 'complete') {
-      // Important: Remove listener to prevent multiple executions if the tab reloads or updates further.
       browser.tabs.onUpdated.removeListener(tabUpdateListener);
 
-      // Add a delay before attempting to paste
       setTimeout(async () => {
         try {
-          // Ensure content.js is loaded before sending a message
-          // Changed for Manifest V2 compatibility
           await browser.tabs.executeScript(newGeminiTab.id, {
             file: 'content.js'
           });
-
-          // Send the combined URL and prompt to the content script
           const response = await browser.tabs.sendMessage(newGeminiTab.id, {
             action: "pasteUrlToActiveElement",
-            textToPaste: textToPaste // Changed from 'url' to 'textToPaste'
+            textToPaste: textToPaste
           });
-          
           if (response && response.success) {
             console.log("Gemini URL Paster: Text pasted successfully into Gemini tab.");
           } else {
             console.warn("Gemini URL Paster: Content script reported pasting was not successful or no suitable element found.", response ? response.reason : "No response details.");
           }
-
         } catch (error) {
-          // Check if the error is due to the tab being closed or navigated away before script execution/messaging
           if (error.message.includes("No tab with id") || error.message.includes("Receiving end does not exist")) {
             console.warn(`Gemini URL Paster: Gemini tab (ID: ${newGeminiTab.id}) was closed or navigated away before action could complete.`);
           } else {
@@ -107,6 +81,54 @@ Conclusion
       }, 500); // 500 milliseconds delay
     }
   };
-
   browser.tabs.onUpdated.addListener(tabUpdateListener);
+}
+
+// Listener for browser action (toolbar icon)
+browser.browserAction.onClicked.addListener(async (initiatingTab) => {
+  let currentTabUrl;
+  try {
+    // Get the URL from the tab where the action was clicked,
+    // or fall back to the active tab in the current window.
+    if (initiatingTab && initiatingTab.url) {
+        currentTabUrl = initiatingTab.url;
+    } else {
+        const [activeTab] = await browser.tabs.query({ active: true, currentWindow: true });
+        if (activeTab && activeTab.url) {
+            currentTabUrl = activeTab.url;
+        }
+    }
+
+    if (!currentTabUrl) {
+      console.error("Gemini URL Paster: Could not get current tab URL for browser action.");
+      return;
+    }
+    // Call the refactored function
+    processAndPasteInGemini(currentTabUrl);
+  } catch (error) {
+    console.error("Gemini URL Paster: Error getting current tab URL for browser action:", error);
+    return;
+  }
+  // Removed redundant promptText, textToPaste, and tab creation logic from here
+});
+
+// Create context menu item
+browser.runtime.onInstalled.addListener(() => {
+  browser.contextMenus.create({
+    id: "summarise-with-gemini",
+    title: "Summarise with Gemini",
+    contexts: ["link"],
+    targetUrlPatterns: ["*://*.youtube.com/watch*", "*://youtu.be/*"] // Only for YouTube links
+  });
+});
+
+// Listener for context menu item click
+browser.contextMenus.onClicked.addListener(async (info, tab) => {
+  if (info.menuItemId === "summarise-with-gemini") {
+    if (info.linkUrl) {
+      processAndPasteInGemini(info.linkUrl);
+    } else {
+      console.error("Gemini URL Paster: No link URL found in context menu click info.");
+    }
+  }
 });
