@@ -1,9 +1,5 @@
 # 🚀 Gemini_Xtention
 
-[![Made with ❤️](https://img.shields.io/badge/Made%20with-%F0%9F%92%9C-blueviolet)](https://github.com/)
-[![Chrome Extension](https://img.shields.io/badge/Chrome%20Extension-Available%20Soon-orange)](#installation)
-[![Firefox Add-on](https://img.shields.io/badge/Firefox%20Add--on-Available%20Soon-blue)](#installation)
-
 **✨ YouTube Video Summarizer Using Google Gemini ✨**
 
 ##### Gemini_Xtention is a powerful browser extension that helps you analyze and summarize all information from any YouTube video using Google Gemini. No API keys required, no configuration needed !! Just Plug & Play...
@@ -78,7 +74,10 @@ This extension requests the following permissions:
 ## ✅ To-Do
 
 - [ ] Publish to Firefox
-- [ ] Publish to Chrome
 - [ ] Add configurations page for custom prompts
 - [ ] Support for Safari Browser (Lower Priority)
+
+## Can't Do
+- [ ] Publish to Chrome (Too broke to pay 5$ registration fee)
+- [ ] Publish to Apple App Store (Too broke to pay the 99$ annual fee)
 ---
