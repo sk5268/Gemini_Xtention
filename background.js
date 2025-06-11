@@ -1,17 +1,16 @@
-// Hardcode the prompt (defined once at the top)
-const promptText = `**Extract and present all information from the video without omitting any detail. Follow these instructions:**
+const promptText = `Extract and present all information from the video without omitting any detail. Follow these instructions:
 
 1. Go through the entire video thoroughly.
-2. Capture and present **everything spoken**, including definitions, explanations, examples, references, and any background context.
-3. Include **any on-screen text, slides, charts, or visual elements** — describe them clearly if relevant to understanding.
-4. Maintain **full detail**; do **not** condense or summarize during the main extraction.
-5. Organize the output into **logical sections** based on the flow of the video.
+2. Capture and present everything spoken, including definitions, explanations, examples, references, and any background context.
+3. Include any on-screen text, slides, charts, or visual elements — describe them clearly if relevant to understanding.
+4. Maintain full detail; do not condense or summarize during the main extraction.
+5. Organize the output into logical sections based on the flow of the video.
 6. Translate any non-English words or phrases if they appear.
-7. At the end, write a **concise summary (up to 200 words)** covering the core message and major takeaways.
+7. At the end, write a concise summary (up to 200 words) covering the core message and major takeaways.
 
-**Output format:**
+Output format:
 
-\`\`\`
+
 Title: <Insert video title here if available>
 
 Introduction
@@ -30,11 +29,11 @@ Conclusion
 
 === Summary ===
 <200-word summary of the full video>
-\`\`\``;
+`;
 
 async function processAndPasteInGemini(urlToProcess) {
   if (!urlToProcess) {
-    console.error("Gemini URL Paster: No URL provided for processing.");
+    console.error("Gemini Summarize Extention: No URL provided for processing.");
     return;
   }
 
@@ -44,12 +43,12 @@ async function processAndPasteInGemini(urlToProcess) {
   try {
     newGeminiTab = await browser.tabs.create({ url: "https://gemini.google.com/app" });
   } catch (error) {
-    console.error("Gemini URL Paster: Error opening new tab for Gemini:", error);
+    console.error("Gemini Summarize Extention: Error opening new tab for Gemini:", error);
     return;
   }
 
   if (!newGeminiTab || !newGeminiTab.id) {
-    console.error("Gemini URL Paster: Failed to create new Gemini tab or get its ID.");
+    console.error("Gemini Summarize Extention: Failed to create new Gemini tab or get its ID.");
     return;
   }
 
@@ -67,15 +66,14 @@ async function processAndPasteInGemini(urlToProcess) {
             textToPaste: textToPaste
           });
           if (response && response.success) {
-            console.log("Gemini URL Paster: Text pasted successfully into Gemini tab.");
           } else {
-            console.warn("Gemini URL Paster: Content script reported pasting was not successful or no suitable element found.", response ? response.reason : "No response details.");
+            console.warn("Gemini Summarize Extention: Content script reported pasting was not successful or no suitable element found.", response ? response.reason : "No response details.");
           }
         } catch (error) {
           if (error.message.includes("No tab with id") || error.message.includes("Receiving end does not exist")) {
-            console.warn(`Gemini URL Paster: Gemini tab (ID: ${newGeminiTab.id}) was closed or navigated away before action could complete.`);
+            console.warn(`Gemini Summarize Extention: Gemini tab (ID: ${newGeminiTab.id}) was closed or navigated away before action could complete.`);
           } else {
-            console.error(`Gemini URL Paster: Error injecting script or sending message to Gemini tab ${newGeminiTab.id}:`, error);
+            console.error(`Gemini Summarize Extention: Error injecting script or sending message to Gemini tab ${newGeminiTab.id}:`, error);
           }
         }
       }, 500); // 500 milliseconds delay
@@ -100,16 +98,15 @@ browser.browserAction.onClicked.addListener(async (initiatingTab) => {
     }
 
     if (!currentTabUrl) {
-      console.error("Gemini URL Paster: Could not get current tab URL for browser action.");
+      console.error("Gemini Summarize Extention: Could not get current tab URL for browser action.");
       return;
     }
-    // Call the refactored function
+    // Call the function
     processAndPasteInGemini(currentTabUrl);
   } catch (error) {
-    console.error("Gemini URL Paster: Error getting current tab URL for browser action:", error);
+    console.error("Gemini Summarize Extention: Error getting current tab URL for browser action:", error);
     return;
   }
-  // Removed redundant promptText, textToPaste, and tab creation logic from here
 });
 
 // Create context menu item
@@ -127,8 +124,6 @@ browser.contextMenus.onClicked.addListener(async (info, tab) => {
   if (info.menuItemId === "summarize-with-gemini") {
     if (info.linkUrl) {
       processAndPasteInGemini(info.linkUrl);
-    } else {
-      console.error("Gemini URL Paster: No link URL found in context menu click info.");
     }
   }
 });
