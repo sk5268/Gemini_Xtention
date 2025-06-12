@@ -1,0 +1,776 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CDF64A052DFA9D3C00529009 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF64A042DFA9D3C00529009 /* AppDelegate.swift */; };
+		CDF64A092DFA9D3C00529009 /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = CDF64A072DFA9D3C00529009 /* Main.html */; };
+		CDF64A0B2DFA9D3C00529009 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CDF64A0A2DFA9D3C00529009 /* Icon.png */; };
+		CDF64A0D2DFA9D3C00529009 /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = CDF64A0C2DFA9D3C00529009 /* Style.css */; };
+		CDF64A0F2DFA9D3C00529009 /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = CDF64A0E2DFA9D3C00529009 /* Script.js */; };
+		CDF64A112DFA9D3C00529009 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF64A102DFA9D3C00529009 /* ViewController.swift */; };
+		CDF64A142DFA9D3C00529009 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDF64A122DFA9D3C00529009 /* Main.storyboard */; };
+		CDF64A162DFA9D3D00529009 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDF64A152DFA9D3D00529009 /* Assets.xcassets */; };
+		CDF64A3A2DFA9D3E00529009 /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF64A392DFA9D3E00529009 /* SafariWebExtensionHandler.swift */; };
+		CDF64A512DFA9D3E00529009 /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = CDF64A4D2DFA9D3E00529009 /* background.js */; };
+		CDF64A522DFA9D3E00529009 /* icons in Resources */ = {isa = PBXBuildFile; fileRef = CDF64A4E2DFA9D3E00529009 /* icons */; };
+		CDF64A532DFA9D3E00529009 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = CDF64A4F2DFA9D3E00529009 /* manifest.json */; };
+		CDF64A542DFA9D3E00529009 /* content.js in Resources */ = {isa = PBXBuildFile; fileRef = CDF64A502DFA9D3E00529009 /* content.js */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CDF64A1F2DFA9D3E00529009 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CDF649F92DFA9D3C00529009 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CDF64A002DFA9D3C00529009;
+			remoteInfo = "Youtube Video Summarizer";
+		};
+		CDF64A292DFA9D3E00529009 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CDF649F92DFA9D3C00529009 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CDF64A002DFA9D3C00529009;
+			remoteInfo = "Youtube Video Summarizer";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CDF64A012DFA9D3C00529009 /* Youtube Video Summarizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Youtube Video Summarizer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDF64A042DFA9D3C00529009 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CDF64A082DFA9D3C00529009 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = Base.lproj/Main.html; sourceTree = "<group>"; };
+		CDF64A0A2DFA9D3C00529009 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		CDF64A0C2DFA9D3C00529009 /* Style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = Style.css; sourceTree = "<group>"; };
+		CDF64A0E2DFA9D3C00529009 /* Script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Script.js; sourceTree = "<group>"; };
+		CDF64A102DFA9D3C00529009 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CDF64A132DFA9D3C00529009 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CDF64A152DFA9D3D00529009 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CDF64A172DFA9D3D00529009 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDF64A182DFA9D3D00529009 /* Youtube_Video_Summarizer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Youtube_Video_Summarizer.entitlements; sourceTree = "<group>"; };
+		CDF64A192DFA9D3D00529009 /* Youtube Video Summarizer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Youtube Video Summarizer.entitlements"; sourceTree = "<group>"; };
+		CDF64A1E2DFA9D3E00529009 /* Youtube Video SummarizerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Youtube Video SummarizerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDF64A282DFA9D3E00529009 /* Youtube Video SummarizerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Youtube Video SummarizerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDF64A342DFA9D3E00529009 /* Youtube Video Summarizer Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Youtube Video Summarizer Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDF64A392DFA9D3E00529009 /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
+		CDF64A3B2DFA9D3E00529009 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDF64A3C2DFA9D3E00529009 /* Youtube_Video_Summarizer_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Youtube_Video_Summarizer_Extension.entitlements; sourceTree = "<group>"; };
+		CDF64A4D2DFA9D3E00529009 /* background.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = background.js; path = Resources/background.js; sourceTree = "<group>"; };
+		CDF64A4E2DFA9D3E00529009 /* icons */ = {isa = PBXFileReference; lastKnownFileType = folder; name = icons; path = Resources/icons; sourceTree = "<group>"; };
+		CDF64A4F2DFA9D3E00529009 /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = manifest.json; path = Resources/manifest.json; sourceTree = "<group>"; };
+		CDF64A502DFA9D3E00529009 /* content.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = content.js; path = Resources/content.js; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CDF649FE2DFA9D3C00529009 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDF64A1B2DFA9D3E00529009 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDF64A252DFA9D3E00529009 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDF64A312DFA9D3E00529009 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CDF649F82DFA9D3C00529009 = {
+			isa = PBXGroup;
+			children = (
+				CDF64A032DFA9D3C00529009 /* Youtube Video Summarizer */,
+				CDF64A382DFA9D3E00529009 /* Youtube Video Summarizer Extension */,
+				CDF64A022DFA9D3C00529009 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CDF64A022DFA9D3C00529009 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CDF64A012DFA9D3C00529009 /* Youtube Video Summarizer.app */,
+				CDF64A1E2DFA9D3E00529009 /* Youtube Video SummarizerTests.xctest */,
+				CDF64A282DFA9D3E00529009 /* Youtube Video SummarizerUITests.xctest */,
+				CDF64A342DFA9D3E00529009 /* Youtube Video Summarizer Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CDF64A032DFA9D3C00529009 /* Youtube Video Summarizer */ = {
+			isa = PBXGroup;
+			children = (
+				CDF64A042DFA9D3C00529009 /* AppDelegate.swift */,
+				CDF64A102DFA9D3C00529009 /* ViewController.swift */,
+				CDF64A122DFA9D3C00529009 /* Main.storyboard */,
+				CDF64A152DFA9D3D00529009 /* Assets.xcassets */,
+				CDF64A172DFA9D3D00529009 /* Info.plist */,
+				CDF64A182DFA9D3D00529009 /* Youtube_Video_Summarizer.entitlements */,
+				CDF64A192DFA9D3D00529009 /* Youtube Video Summarizer.entitlements */,
+				CDF64A062DFA9D3C00529009 /* Resources */,
+			);
+			path = "Youtube Video Summarizer";
+			sourceTree = "<group>";
+		};
+		CDF64A062DFA9D3C00529009 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CDF64A072DFA9D3C00529009 /* Main.html */,
+				CDF64A0A2DFA9D3C00529009 /* Icon.png */,
+				CDF64A0C2DFA9D3C00529009 /* Style.css */,
+				CDF64A0E2DFA9D3C00529009 /* Script.js */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CDF64A382DFA9D3E00529009 /* Youtube Video Summarizer Extension */ = {
+			isa = PBXGroup;
+			children = (
+				CDF64A4C2DFA9D3E00529009 /* Resources */,
+				CDF64A392DFA9D3E00529009 /* SafariWebExtensionHandler.swift */,
+				CDF64A3B2DFA9D3E00529009 /* Info.plist */,
+				CDF64A3C2DFA9D3E00529009 /* Youtube_Video_Summarizer_Extension.entitlements */,
+			);
+			path = "Youtube Video Summarizer Extension";
+			sourceTree = "<group>";
+		};
+		CDF64A4C2DFA9D3E00529009 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CDF64A4D2DFA9D3E00529009 /* background.js */,
+				CDF64A4E2DFA9D3E00529009 /* icons */,
+				CDF64A4F2DFA9D3E00529009 /* manifest.json */,
+				CDF64A502DFA9D3E00529009 /* content.js */,
+			);
+			name = Resources;
+			path = "Youtube Video Summarizer Extension";
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CDF64A002DFA9D3C00529009 /* Youtube Video Summarizer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CDF64A432DFA9D3E00529009 /* Build configuration list for PBXNativeTarget "Youtube Video Summarizer" */;
+			buildPhases = (
+				CDF649FD2DFA9D3C00529009 /* Sources */,
+				CDF649FE2DFA9D3C00529009 /* Frameworks */,
+				CDF649FF2DFA9D3C00529009 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Youtube Video Summarizer";
+			packageProductDependencies = (
+			);
+			productName = "Youtube Video Summarizer";
+			productReference = CDF64A012DFA9D3C00529009 /* Youtube Video Summarizer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CDF64A1D2DFA9D3E00529009 /* Youtube Video SummarizerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CDF64A462DFA9D3E00529009 /* Build configuration list for PBXNativeTarget "Youtube Video SummarizerTests" */;
+			buildPhases = (
+				CDF64A1A2DFA9D3E00529009 /* Sources */,
+				CDF64A1B2DFA9D3E00529009 /* Frameworks */,
+				CDF64A1C2DFA9D3E00529009 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CDF64A202DFA9D3E00529009 /* PBXTargetDependency */,
+			);
+			name = "Youtube Video SummarizerTests";
+			packageProductDependencies = (
+			);
+			productName = "Youtube Video SummarizerTests";
+			productReference = CDF64A1E2DFA9D3E00529009 /* Youtube Video SummarizerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CDF64A272DFA9D3E00529009 /* Youtube Video SummarizerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CDF64A492DFA9D3E00529009 /* Build configuration list for PBXNativeTarget "Youtube Video SummarizerUITests" */;
+			buildPhases = (
+				CDF64A242DFA9D3E00529009 /* Sources */,
+				CDF64A252DFA9D3E00529009 /* Frameworks */,
+				CDF64A262DFA9D3E00529009 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CDF64A2A2DFA9D3E00529009 /* PBXTargetDependency */,
+			);
+			name = "Youtube Video SummarizerUITests";
+			packageProductDependencies = (
+			);
+			productName = "Youtube Video SummarizerUITests";
+			productReference = CDF64A282DFA9D3E00529009 /* Youtube Video SummarizerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		CDF64A332DFA9D3E00529009 /* Youtube Video Summarizer Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CDF64A3F2DFA9D3E00529009 /* Build configuration list for PBXNativeTarget "Youtube Video Summarizer Extension" */;
+			buildPhases = (
+				CDF64A302DFA9D3E00529009 /* Sources */,
+				CDF64A312DFA9D3E00529009 /* Frameworks */,
+				CDF64A322DFA9D3E00529009 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Youtube Video Summarizer Extension";
+			packageProductDependencies = (
+			);
+			productName = "Youtube Video Summarizer Extension";
+			productReference = CDF64A342DFA9D3E00529009 /* Youtube Video Summarizer Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CDF649F92DFA9D3C00529009 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1640;
+				LastUpgradeCheck = 1640;
+				TargetAttributes = {
+					CDF64A002DFA9D3C00529009 = {
+						CreatedOnToolsVersion = 16.4;
+					};
+					CDF64A1D2DFA9D3E00529009 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = CDF64A002DFA9D3C00529009;
+					};
+					CDF64A272DFA9D3E00529009 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = CDF64A002DFA9D3C00529009;
+					};
+					CDF64A332DFA9D3E00529009 = {
+						CreatedOnToolsVersion = 16.4;
+					};
+				};
+			};
+			buildConfigurationList = CDF649FC2DFA9D3C00529009 /* Build configuration list for PBXProject "Youtube Video Summarizer" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CDF649F82DFA9D3C00529009;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = CDF64A022DFA9D3C00529009 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CDF64A002DFA9D3C00529009 /* Youtube Video Summarizer */,
+				CDF64A1D2DFA9D3E00529009 /* Youtube Video SummarizerTests */,
+				CDF64A272DFA9D3E00529009 /* Youtube Video SummarizerUITests */,
+				CDF64A332DFA9D3E00529009 /* Youtube Video Summarizer Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CDF649FF2DFA9D3C00529009 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDF64A0B2DFA9D3C00529009 /* Icon.png in Resources */,
+				CDF64A142DFA9D3C00529009 /* Main.storyboard in Resources */,
+				CDF64A0F2DFA9D3C00529009 /* Script.js in Resources */,
+				CDF64A092DFA9D3C00529009 /* Main.html in Resources */,
+				CDF64A162DFA9D3D00529009 /* Assets.xcassets in Resources */,
+				CDF64A0D2DFA9D3C00529009 /* Style.css in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDF64A1C2DFA9D3E00529009 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDF64A262DFA9D3E00529009 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDF64A322DFA9D3E00529009 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDF64A542DFA9D3E00529009 /* content.js in Resources */,
+				CDF64A512DFA9D3E00529009 /* background.js in Resources */,
+				CDF64A532DFA9D3E00529009 /* manifest.json in Resources */,
+				CDF64A522DFA9D3E00529009 /* icons in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CDF649FD2DFA9D3C00529009 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDF64A112DFA9D3C00529009 /* ViewController.swift in Sources */,
+				CDF64A052DFA9D3C00529009 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDF64A1A2DFA9D3E00529009 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDF64A242DFA9D3E00529009 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDF64A302DFA9D3E00529009 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDF64A3A2DFA9D3E00529009 /* SafariWebExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CDF64A202DFA9D3E00529009 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CDF64A002DFA9D3C00529009 /* Youtube Video Summarizer */;
+			targetProxy = CDF64A1F2DFA9D3E00529009 /* PBXContainerItemProxy */;
+		};
+		CDF64A2A2DFA9D3E00529009 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CDF64A002DFA9D3C00529009 /* Youtube Video Summarizer */;
+			targetProxy = CDF64A292DFA9D3E00529009 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CDF64A072DFA9D3C00529009 /* Main.html */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CDF64A082DFA9D3C00529009 /* Base */,
+			);
+			name = Main.html;
+			sourceTree = "<group>";
+		};
+		CDF64A122DFA9D3C00529009 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CDF64A132DFA9D3C00529009 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CDF64A3D2DFA9D3E00529009 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CDF64A3E2DFA9D3E00529009 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		CDF64A402DFA9D3E00529009 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Youtube Video Summarizer Extension/Youtube_Video_Summarizer_Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Youtube Video Summarizer Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Youtube Video Summarizer Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yourCompany.Youtube-Video-Summarizer.Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		CDF64A412DFA9D3E00529009 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Youtube Video Summarizer Extension/Youtube_Video_Summarizer_Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Youtube Video Summarizer Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Youtube Video Summarizer Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yourCompany.Youtube-Video-Summarizer.Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		CDF64A442DFA9D3E00529009 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Youtube Video Summarizer/Youtube Video Summarizer.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J68KJXDH8H;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Youtube Video Summarizer/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Youtube Video Summarizer";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aosl7.Youtube-Video-Summarizer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		CDF64A452DFA9D3E00529009 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Youtube Video Summarizer/Youtube Video Summarizer.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J68KJXDH8H;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Youtube Video Summarizer/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Youtube Video Summarizer";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aosl7.Youtube-Video-Summarizer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		CDF64A472DFA9D3E00529009 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yourCompany.Youtube-Video-SummarizerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Youtube Video Summarizer.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Youtube Video Summarizer";
+			};
+			name = Debug;
+		};
+		CDF64A482DFA9D3E00529009 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yourCompany.Youtube-Video-SummarizerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Youtube Video Summarizer.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Youtube Video Summarizer";
+			};
+			name = Release;
+		};
+		CDF64A4A2DFA9D3E00529009 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yourCompany.Youtube-Video-SummarizerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "Youtube Video Summarizer";
+			};
+			name = Debug;
+		};
+		CDF64A4B2DFA9D3E00529009 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yourCompany.Youtube-Video-SummarizerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "Youtube Video Summarizer";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CDF649FC2DFA9D3C00529009 /* Build configuration list for PBXProject "Youtube Video Summarizer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDF64A3D2DFA9D3E00529009 /* Debug */,
+				CDF64A3E2DFA9D3E00529009 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CDF64A3F2DFA9D3E00529009 /* Build configuration list for PBXNativeTarget "Youtube Video Summarizer Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDF64A402DFA9D3E00529009 /* Debug */,
+				CDF64A412DFA9D3E00529009 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CDF64A432DFA9D3E00529009 /* Build configuration list for PBXNativeTarget "Youtube Video Summarizer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDF64A442DFA9D3E00529009 /* Debug */,
+				CDF64A452DFA9D3E00529009 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CDF64A462DFA9D3E00529009 /* Build configuration list for PBXNativeTarget "Youtube Video SummarizerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDF64A472DFA9D3E00529009 /* Debug */,
+				CDF64A482DFA9D3E00529009 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CDF64A492DFA9D3E00529009 /* Build configuration list for PBXNativeTarget "Youtube Video SummarizerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDF64A4A2DFA9D3E00529009 /* Debug */,
+				CDF64A4B2DFA9D3E00529009 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CDF649F92DFA9D3C00529009 /* Project object */;
+}
