@@ -23,8 +23,8 @@ Manually copying the YouTube URL, opening Gemini, pasting the link, and asking i
 
 ## 📦 Installation
 
-1. ![Install on Firefox & Forks](https://addons.mozilla.org/addon/yt-video-summarizer/)
-2. ![Chrome](https://github.com/sk5268/Gemini_Xtention/releases/tag/Stable)
+1. ![Firefox & Forks](https://addons.mozilla.org/addon/yt-video-summarizer/)
+2. ![Chrome & Forks](https://github.com/sk5268/Gemini_Xtention/releases/tag/Stable)
 3. ![Safari](https://github.com/sk5268/Gemini_Xtention/releases/tag/Stable)
 
 ---
