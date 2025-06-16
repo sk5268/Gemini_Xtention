@@ -78,6 +78,7 @@ This extension requests the following permissions:
 - [ ] Add configurations page for custom prompts
 - [ ] Configurable option to open tab in background (not switch to it)
 - [x] Support for Safari Browser (Lower Priority)
+- [ ] Add support for shortcut trigger.
 
 ## ❌ Can't Do
 - [ ] Publish to Chrome (Too broke to pay 5$ registration fee)
