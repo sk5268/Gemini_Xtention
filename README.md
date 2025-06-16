@@ -23,8 +23,9 @@ Manually copying the YouTube URL, opening Gemini, pasting the link, and asking i
 
 ## 📦 Installation
 
-> **Coming Soon!**  
-> Stay tuned for the official release on the Chrome Web Store **and** Firefox Add-ons.
+1. ![Install on Firefox & Forks](https://addons.mozilla.org/addon/yt-video-summarizer/)
+2. ![Chrome](https://github.com/sk5268/Gemini_Xtention/releases/tag/Stable)
+3. ![Safari](https://github.com/sk5268/Gemini_Xtention/releases/tag/Stable)
 
 ---
 
@@ -73,9 +74,10 @@ This extension requests the following permissions:
 
 ## ✅ To-Do
 
-- [ ] Publish to Firefox
+- [x] Publish to Firefox
 - [ ] Add configurations page for custom prompts
-- [ ] Support for Safari Browser (Lower Priority)
+- [ ] Configurable option to open tab in background (not switch to it)
+- [x] Support for Safari Browser (Lower Priority)
 
 ## ❌ Can't Do
 - [ ] Publish to Chrome (Too broke to pay 5$ registration fee)
