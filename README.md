@@ -1,14 +1,14 @@
-# 🚀 Gemini_Xtention
+# 🚀 Gemini_Xtension
 
 **✨ YouTube Video Summarizer Using Google Gemini ✨**
 
-##### Gemini_Xtention is a powerful browser extension that helps you analyze and summarize all information from any YouTube video using Google Gemini. No API keys required, no configuration needed !! Just Plug & Play...
+##### Gemini_Xtension is a powerful browser extension that helps you analyze and summarize all information from any YouTube video using Google Gemini. No API keys required, no configuration needed !! Just Plug & Play...
 ---
 
 ## 💡 Motivation
 
 Manually copying the YouTube URL, opening Gemini, pasting the link, and asking it to summarize is repetitive and cumbersome.  
-**Gemini_Xtention automates this entire process**—saving you time and effort with just a click or right-click!
+**Gemini_Xtension automates this entire process**—saving you time and effort with just a click or right-click!
 
 ---
 
@@ -24,15 +24,15 @@ Manually copying the YouTube URL, opening Gemini, pasting the link, and asking i
 ## 📦 Installation
 
 1. [Firefox & Forks](https://addons.mozilla.org/addon/yt-video-summarizer/)
-2. [Chrome & Forks](https://github.com/sk5268/Gemini_Xtention/releases/tag/Stable)
-3. [Safari](https://github.com/sk5268/Gemini_Xtention/releases/tag/Stable)
+2. [Chrome & Forks](https://github.com/sk5268/Gemini_Xtension/releases/tag/Stable)
+3. [Safari](https://github.com/sk5268/Gemini_Xtension/releases/tag/Stable)
 
 ---
 
 ## 🛠️ Usage
 
 1. **Summarize Current Video:**  
-   Click the <kbd>Gemini_Xtention</kbd> icon while on a YouTube video page.
+   Click the <kbd>Gemini_Xtension</kbd> icon while on a YouTube video page.
 
 2. **Summarize Any YouTube Link:**  
    Right-click any YouTube link and select <kbd>Summarize with Gemini</kbd> from the context menu.
@@ -68,7 +68,7 @@ This extension requests the following permissions:
 
 ## ⚠️ Disclaimer
 
-> Gemini_Xtention is **not affiliated** with Google or YouTube.
+> Gemini_Xtension is **not affiliated** with Google or YouTube.
 
 ---
 
