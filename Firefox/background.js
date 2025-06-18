@@ -1,4 +1,4 @@
-const promptText = `Extract and present all information from the video without omitting any detail. Follow these instructions:
+const DEFAULT_PROMPT = `Extract and present all information from the video without omitting any detail. Follow these instructions:
 
 1. Go through the entire video thoroughly.
 2. Capture and present everything spoken, including definitions, explanations, examples, references, and any background context.
@@ -31,12 +31,23 @@ Conclusion
 <200-word summary of the full video>
 `;
 
+async function getPromptText() {
+  try {
+    const result = await browser.storage.sync.get(['customPrompt']);
+    return result.customPrompt || DEFAULT_PROMPT;
+  } catch (error) {
+    console.error("Gemini Summarize Extension: Error getting custom prompt:", error);
+    return DEFAULT_PROMPT;
+  }
+}
+
 async function processAndPasteInGemini(urlToProcess) {
   if (!urlToProcess) {
     console.error("Gemini Summarize Extention: No URL provided for processing.");
     return;
   }
 
+  const promptText = await getPromptText();
   const textToPaste = `${urlToProcess}\n\n${promptText}`;
   let newGeminiTab;
 

@@ -3,9 +3,15 @@
   "name": "Youtube Video Summarizer",
   "version": "1.5",
   "description": "Summarizes the Youtube video using Google Gemini",
+  "applications": {
+    "gecko": {
+      "id": "youtube-summarizer@gemini.extension"
+    }
+  },
   "permissions": [
     "tabs",
     "contextMenus",
+    "storage",
     "https://gemini.google.com/*"
   ],
   "browser_action": {
@@ -18,6 +24,10 @@
   "background": {
     "scripts": ["background.js"],
     "persistent": false
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
   },
   "icons": {
     "48": "icons/icon48.png",
