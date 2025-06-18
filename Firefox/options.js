@@ -16,6 +16,10 @@ Output format:
 
 Title: <Insert video title here if available>
 
+=== Summary ===
+<200-word summary of the full video>
+
+===============
 Introduction
 - ...
 
@@ -29,9 +33,6 @@ Section 2: <Descriptive title>
 
 Conclusion
 - ...
-
-=== Summary ===
-<200-word summary of the full video>
 `;
 
 document.addEventListener('DOMContentLoaded', function() {
