@@ -10,6 +10,7 @@
   },
   "permissions": [
     "tabs",
+    "activeTab",
     "contextMenus",
     "storage",
     "https://gemini.google.com/*"
@@ -25,6 +26,13 @@
     "scripts": ["background.js"],
     "persistent": false
   },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
   "options_ui": {
     "page": "options.html",
     "open_in_tab": true

@@ -151,3 +151,12 @@ browser.contextMenus.onClicked.addListener(async (info, tab) => {
     }
   }
 });
+
+// Add message listener for content script requests
+browser.runtime.onMessage.addListener((message, sender, sendResponse) => {
+  if (message.action === "processYouTubeLink" && message.url) {
+    processAndPasteInGemini(message.url);
+    sendResponse({ success: true });
+  }
+  return false;
+});

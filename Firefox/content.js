@@ -1,3 +1,66 @@
+// Add click event listener for spacebar + click functionality
+document.addEventListener('click', function(event) {
+  // Check if spacebar was held during click (keyCode 32 or key ' ')
+  if (event.ctrlKey || event.metaKey || event.altKey || event.shiftKey) {
+    // Don't interfere with other modifier key combinations
+    return;
+  }
+
+  // Check if the clicked element is a link or has a link parent
+  let linkElement = event.target;
+  while (linkElement && linkElement.tagName !== 'A') {
+    linkElement = linkElement.parentElement;
+  }
+
+  if (!linkElement || !linkElement.href) {
+    return;
+  }
+
+  // Check if it's a YouTube link
+  const youtubePatterns = [
+    /^https?:\/\/(www\.)?youtube\.com\/watch\?/, // youtube.com/watch
+    /^https?:\/\/youtu\.be\//                     // youtu.be short links
+  ];
+  const isYoutube = youtubePatterns.some(pattern => pattern.test(linkElement.href));
+
+  if (!isYoutube) {
+    return;
+  }
+
+  // Check if spacebar is currently pressed
+  // We'll use a keydown/keyup tracking approach
+  if (window.spacebarPressed) {
+    event.preventDefault();
+    event.stopPropagation();
+    
+    // Send message to background script to process the YouTube link
+    browser.runtime.sendMessage({
+      action: "processYouTubeLink",
+      url: linkElement.href
+    });
+  }
+}, true);
+
+// Track spacebar state
+window.spacebarPressed = false;
+
+document.addEventListener('keydown', function(event) {
+  if (event.code === 'Space' || event.keyCode === 32) {
+    window.spacebarPressed = true;
+  }
+});
+
+document.addEventListener('keyup', function(event) {
+  if (event.code === 'Space' || event.keyCode === 32) {
+    window.spacebarPressed = false;
+  }
+});
+
+// Reset spacebar state when window loses focus
+window.addEventListener('blur', function() {
+  window.spacebarPressed = false;
+});
+
 browser.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (message.action === "pasteUrlToActiveElement" && message.textToPaste) { // Changed from message.url
     const activeElement = document.activeElement;
