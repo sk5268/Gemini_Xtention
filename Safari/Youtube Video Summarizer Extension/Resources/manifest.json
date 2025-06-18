@@ -9,7 +9,7 @@
     "https://gemini.google.com/*"
   ],
   "browser_action": {
-    "default_title": "Summarize Youtube Video with Gemini",
+    "default_title": "Summarize Youtube Video",
     "default_icon": {
       "48": "icons/icon48.png",
       "128": "icons/icon128.png"
