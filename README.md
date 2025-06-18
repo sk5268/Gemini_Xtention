@@ -75,12 +75,12 @@ This extension requests the following permissions:
 ## ✅ To-Do
 
 - [x] Publish to Firefox
-- [ ] Add configurations page for custom prompts
+- [x] Add configurations page for custom prompts
 - [ ] Configurable option to open tab in background (not switch to it)
 - [x] Support for Safari Browser (Lower Priority)
 - [ ] Add support for shortcut trigger.
+- [ ] Publish to Chrome
 
 ## ❌ Can't Do
-- [ ] Publish to Chrome (Too broke to pay 5$ registration fee)
-- [ ] Publish to Apple App Store (Too broke to pay the 99$ annual fee)
+- [ ] Publish to Apple App Store (Too broke to pay the 99$ fee)
 ---
