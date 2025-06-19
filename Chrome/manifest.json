@@ -1,12 +1,13 @@
 {
   "manifest_version": 3,
   "name": "Youtube Video Summarizer",
-  "version": "1.5",
+  "version": "1.7",
   "description": "Summarize Youtube video using Google Gemini",
   "permissions": [
     "tabs",
     "contextMenus",
-    "scripting"
+    "scripting",
+    "storage"
   ],
   "host_permissions": [
     "https://gemini.google.com/*"
@@ -20,6 +21,10 @@
   },
   "background": {
     "service_worker": "background.js"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
   },
   "icons": {
     "48": "icons/icon48.png",

@@ -1,4 +1,4 @@
-const promptText = `Extract and present all information from the video without omitting any detail. Follow these instructions:
+const DEFAULT_PROMPT = `Extract and present all information from the video without omitting any detail. Follow these instructions:
 
 1. Go through the entire video thoroughly.
 2. Capture and present everything spoken, including definitions, explanations, examples, references, and any background context.
@@ -13,6 +13,10 @@ Output format:
 
 Title: <Insert video title here if available>
 
+=== Summary ===
+<200-word summary of the full video>
+
+===============
 Introduction
 - ...
 
@@ -26,10 +30,15 @@ Section 2: <Descriptive title>
 
 Conclusion
 - ...
-
-=== Summary ===
-<200-word summary of the full video>
 `;
+
+async function getPromptText() {
+  return new Promise((resolve) => {
+    chrome.storage.sync.get(['customPrompt'], (result) => {
+      resolve(result.customPrompt || DEFAULT_PROMPT);
+    });
+  });
+}
 
 function processAndPasteInGemini(urlToProcess) {
   if (!urlToProcess) {
@@ -37,37 +46,39 @@ function processAndPasteInGemini(urlToProcess) {
     return;
   }
 
-  const textToPaste = `${urlToProcess}\n\n${promptText}`;
-  chrome.tabs.create({ url: "https://gemini.google.com/app" }, function(newGeminiTab) {
-    if (!newGeminiTab || !newGeminiTab.id) {
-      console.error("Gemini Summarize Extension: Failed to create new Gemini tab or get its ID.");
-      return;
-    }
-
-    function tabUpdateListener(tabId, changeInfo, tab) {
-      if (tabId === newGeminiTab.id && changeInfo.status === 'complete') {
-        chrome.tabs.onUpdated.removeListener(tabUpdateListener);
-
-        setTimeout(function() {
-          chrome.scripting.executeScript({
-            target: { tabId: newGeminiTab.id },
-            files: ['content.js']
-          }, function() {
-            chrome.tabs.sendMessage(newGeminiTab.id, {
-              action: "pasteUrlToActiveElement",
-              textToPaste: textToPaste
-            }, function(response) {
-              if (response && response.success) {
-                // Success
-              } else {
-                console.warn("Gemini Summarize Extension: Content script reported pasting was not successful or no suitable element found.", response ? response.reason : "No response details.");
-              }
-            });
-          });
-        }, 300);
+  getPromptText().then(promptText => {
+    const textToPaste = `${urlToProcess}\n\n${promptText}`;
+    chrome.tabs.create({ url: "https://gemini.google.com/app" }, function(newGeminiTab) {
+      if (!newGeminiTab || !newGeminiTab.id) {
+        console.error("Gemini Summarize Extension: Failed to create new Gemini tab or get its ID.");
+        return;
       }
-    }
-    chrome.tabs.onUpdated.addListener(tabUpdateListener);
+
+      function tabUpdateListener(tabId, changeInfo, tab) {
+        if (tabId === newGeminiTab.id && changeInfo.status === 'complete') {
+          chrome.tabs.onUpdated.removeListener(tabUpdateListener);
+
+          setTimeout(function() {
+            chrome.scripting.executeScript({
+              target: { tabId: newGeminiTab.id },
+              files: ['content.js']
+            }, function() {
+              chrome.tabs.sendMessage(newGeminiTab.id, {
+                action: "pasteUrlToActiveElement",
+                textToPaste: textToPaste
+              }, function(response) {
+                if (response && response.success) {
+                  // Success
+                } else {
+                  console.warn("Gemini Summarize Extension: Content script reported pasting was not successful or no suitable element found.", response ? response.reason : "No response details.");
+                }
+              });
+            });
+          }, 300);
+        }
+      }
+      chrome.tabs.onUpdated.addListener(tabUpdateListener);
+    });
   });
 }
 
