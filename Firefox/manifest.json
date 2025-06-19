@@ -5,7 +5,7 @@
   "description": "Summarize Youtube video using Google Gemini",
   "browser_specific_settings": {
     "gecko": {
-      "id": "youtube-summarizer@gemini.extension"
+      "id": "{redacted}"
     }
   },
   "permissions": [
