@@ -1,8 +1,7 @@
-// Add click event listener for spacebar + click functionality
+// Add click event listener for Alt + click functionality
 document.addEventListener('click', function(event) {
-  // Check if spacebar was held during click (keyCode 32 or key ' ')
-  if (event.ctrlKey || event.metaKey || event.altKey || event.shiftKey) {
-    // Don't interfere with other modifier key combinations
+  // Only proceed if Alt key was held during click
+  if (!event.altKey) {
     return;
   }
 
@@ -18,50 +17,28 @@ document.addEventListener('click', function(event) {
 
   // Check if it's a YouTube link
   const youtubePatterns = [
-    /^https?:\/\/(www\.)?youtube\.com\/watch\?/, // youtube.com/watch
-    /^https?:\/\/youtu\.be\//                     // youtu.be short links
+    /^https?:\/\/(www\.)?youtube\.com\/watch\?/,
+    /^https?:\/\/youtu\.be\//
   ];
-  const isYoutube = youtubePatterns.some(pattern => pattern.test(linkElement.href));
+  const isYoutube = youtubePatterns.some(function(pattern) {
+    return pattern.test(linkElement.href);
+  });
 
   if (!isYoutube) {
     return;
   }
 
-  // Check if spacebar is currently pressed
-  // We'll use a keydown/keyup tracking approach
-  if (window.spacebarPressed) {
-    event.preventDefault();
-    event.stopPropagation();
-    
-    // Send message to background script to process the YouTube link
-    browser.runtime.sendMessage({
-      action: "processYouTubeLink",
-      url: linkElement.href
-    });
-  }
+  event.preventDefault();
+  event.stopPropagation();
+
+  // Send message to background script to process the YouTube link
+  browser.runtime.sendMessage({
+    action: "processYouTubeLink",
+    url: linkElement.href
+  });
 }, true);
 
-// Track spacebar state
-window.spacebarPressed = false;
-
-document.addEventListener('keydown', function(event) {
-  if (event.code === 'Space' || event.keyCode === 32) {
-    window.spacebarPressed = true;
-  }
-});
-
-document.addEventListener('keyup', function(event) {
-  if (event.code === 'Space' || event.keyCode === 32) {
-    window.spacebarPressed = false;
-  }
-});
-
-// Reset spacebar state when window loses focus
-window.addEventListener('blur', function() {
-  window.spacebarPressed = false;
-});
-
-browser.runtime.onMessage.addListener((message, sender, sendResponse) => {
+browser.runtime.onMessage.addListener(function(message, sender, sendResponse) {
   if (message.action === "pasteUrlToActiveElement" && message.textToPaste) { // Changed from message.url
     const activeElement = document.activeElement;
     let pasted = false;
