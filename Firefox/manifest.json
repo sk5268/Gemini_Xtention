@@ -3,7 +3,7 @@
   "name": "Youtube Video Summarizer",
   "version": "1.7",
   "description": "Summarize Youtube video using Google Gemini",
-  "applications": {
+  "browser_specific_settings": {
     "gecko": {
       "id": "youtube-summarizer@gemini.extension"
     }
