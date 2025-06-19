@@ -4,7 +4,6 @@
   "version": "1.7",
   "description": "Summarize Youtube video using Google Gemini",
   "permissions": [
-    "tabs",
     "activeTab",
     "contextMenus",
     "storage",
@@ -25,7 +24,7 @@
   },
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
+      "matches": ["https://www.youtube.com/*", "https://youtu.be/*"],
       "js": ["content.js"],
       "run_at": "document_end"
     }
