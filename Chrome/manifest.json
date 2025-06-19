@@ -5,9 +5,10 @@
   "description": "Summarize Youtube video using Google Gemini",
   "permissions": [
     "tabs",
+    "activeTab",
     "contextMenus",
-    "scripting",
-    "storage"
+    "storage",
+    "scripting"
   ],
   "host_permissions": [
     "https://gemini.google.com/*"
@@ -22,10 +23,14 @@
   "background": {
     "service_worker": "background.js"
   },
-  "options_ui": {
-    "page": "options.html",
-    "open_in_tab": true
-  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "options_page": "options.html",
   "icons": {
     "48": "icons/icon48.png",
     "128": "icons/icon128.png"

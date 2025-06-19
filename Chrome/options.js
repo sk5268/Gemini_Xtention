@@ -50,20 +50,26 @@ document.addEventListener('DOMContentLoaded', function() {
     // Save custom prompt
     saveButton.addEventListener('click', function() {
         const customPrompt = promptTextarea.value.trim();
-        
         chrome.storage.sync.set({
             customPrompt: customPrompt
         }, () => {
-            showStatusMessage('Prompt saved successfully!', 'success');
+            if (chrome.runtime.lastError) {
+                showStatusMessage('Error saving prompt: ' + chrome.runtime.lastError.message, 'error');
+            } else {
+                showStatusMessage('Prompt saved successfully!', 'success');
+            }
         });
     });
 
     // Reset to default prompt
     resetButton.addEventListener('click', function() {
         promptTextarea.value = DEFAULT_PROMPT;
-        
         chrome.storage.sync.remove(['customPrompt'], () => {
-            showStatusMessage('Prompt reset to default!', 'success');
+            if (chrome.runtime.lastError) {
+                showStatusMessage('Error resetting prompt: ' + chrome.runtime.lastError.message, 'error');
+            } else {
+                showStatusMessage('Prompt reset to default!', 'success');
+            }
         });
     });
 
